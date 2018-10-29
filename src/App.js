@@ -1,6 +1,7 @@
 import React from 'react'
 // import * as BooksAPI from './BooksAPI'
 import './App.css'
+import Footer from './components/Footer'
 
 class BooksApp extends React.Component {
   state = {
@@ -197,7 +198,8 @@ class BooksApp extends React.Component {
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
             </div>
           </div>
-        )}
+          )}
+        <Footer/>
       </div>
     )
   }

@@ -172,3 +172,52 @@ body, .app {
   text-align: center;
   font-size: 0.8em;
 }
+
+
+/********** Footer ***************/
+.footer {
+  background-color: #AE1438;
+  color: #fff;
+  padding: 1em;
+  margin: 0;
+  text-align: center;
+}
+
+/********** customization of buttons and font awesome contact icons***************/
+.contact {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-logo-holder {
+  text-align: center;
+}
+
+.contact-link {
+  text-decoration: unset;
+  padding: 5px;
+}
+
+.heart {
+  color: #f3c5c1;
+}
+
+.github {
+  color: #b2bfcc;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.twitter {
+  color: #1da1f3;
+}
+
+.google {
+  color: #dc4538;
+}
+
+.facebook {
+  color: #3b5998;
+}
