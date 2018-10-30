@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import Book from './Book';
 import PropTypes from 'prop-types';
 
+
 class ListBooks extends Component {
-    render(props) {
+    render() {
         return (
 <div className="list-books">
     <div className="list-books-title">
@@ -20,30 +22,30 @@ class ListBooks extends Component {
                     </ol>
                 </div>
             </div>
-        <div className="bookshelf">
-            <h2 className="bookshelf-title">Want to Read</h2>
-            <div className="bookshelf-books">
-            <ol className="books-grid">
-                <li>
+            <div className="bookshelf">
+                <h2 className="bookshelf-title">Want to Read</h2>
+                <div className="bookshelf-books">
+                <ol className="books-grid">
+                    <li>
 
-                </li>
-            </ol>
+                    </li>
+                </ol>
+                </div>
             </div>
-        </div>
-        <div className="bookshelf">
-            <h2 className="bookshelf-title">Read</h2>
-            <div className="bookshelf-books">
-            <ol className="books-grid">
-                <li>
+            <div className="bookshelf">
+                <h2 className="bookshelf-title">Read</h2>
+                <div className="bookshelf-books">
+                <ol className="books-grid">
+                    <li>
 
-                </li>
-            </ol>
+                    </li>
+                </ol>
+                </div>
             </div>
-        </div>
         </div>
     </div>
             <div className="open-search">
-              <a onClick={(props) => props.data.setState({ showSearchPage: true })}>Add a book</a>
+              <a>Add a book</a>
             </div>
           </div>
 

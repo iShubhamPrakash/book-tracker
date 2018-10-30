@@ -5,7 +5,9 @@ import Footer from './components/Footer'
 import SearchBooks from './components/SearchBooks'
 import ListBooks from './components/ListBooks'
 
+
 class BooksApp extends React.Component {
+
   state = {
     /**
      * TODO: Instead of using this state variable to keep track of which page
@@ -19,12 +21,19 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-        {this.state.showSearchPage ? (<SearchBooks />) : (<ListBooks data={this.state}/>)}
 
-        <Footer/>
+        <SearchBooks />
+        <ListBooks />
+
+        {/* {this.state.showSearchPage ? (<SearchBooks />) : (<ListBooks/>)} */}
+
+
+        <Footer />
+
       </div>
     )
   }
 }
+
 
 export default BooksApp

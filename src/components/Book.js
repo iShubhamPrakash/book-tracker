@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component} from 'react';
 import PropTypes from 'prop-types';
 
-class Book extends React.Component {
+class Book extends Component {
     render() {
         return (
             <div className="book">
