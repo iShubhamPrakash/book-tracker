@@ -177,8 +177,9 @@ body, .app {
 /********** Footer ***************/
 .footer {
   background-color: #AE1438;
-  color: #fff;
+  color: rgb(204, 174, 174);
   padding: 1em;
+  padding-bottom: 0.2em;
   margin: 0;
   text-align: center;
 }
