@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
 import Book from './Book';
+import * as BooksAPI from '../BooksAPI';
 // Import proptypes for typeChecking
 import PropTypes from 'prop-types';
 
 class SearchBooks extends Component {
 
   state = {
-    query:""
+    query: "",
+    searchedbook:[]
   }
 
   updateQuery= (query) => {
-    this.setState({query:query})
+    this.setState({ query: query });
+    this.fetchBookOnQuery(query)
+  }
+
+  fetchBookOnQuery = (query) => {
+    if (query) {
+      BooksAPI.search(query).then((data)=>this.setState({searchedbook:data}))
+    } else {
+      this.setState({searchedbook:[]})
+    }
   }
 
   render() {
@@ -29,7 +40,15 @@ class SearchBooks extends Component {
             </div>
           </div>
           <div className="search-books-results">
-            <ol className="books-grid"></ol>
+            <ol className="books-grid">
+              {
+                this.state.searchedbook.map(book => (
+                  <li key={book.id}>
+                    <Book book={book}/>
+                  </li>
+                ))
+              }
+            </ol>
           </div>
         </div>
 
