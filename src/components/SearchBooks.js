@@ -44,7 +44,10 @@ class SearchBooks extends Component {
               {
                 this.state.searchedbook.map(book => (
                   <li key={book.id}>
-                    <Book book={book}/>
+                    <Book book={book}
+                      changeBookShelf={this.props.changeBookShelf}
+                      thisShelf={book.self}
+                    />
                   </li>
                 ))
               }
