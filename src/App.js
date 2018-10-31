@@ -2,21 +2,17 @@ import React from 'react'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import Footer from './components/Footer'
-import SearchBooks from './components/SearchBooks'
 import ListBooks from './components/ListBooks'
-import Book from './components/Book';
 
 
 class BooksApp extends React.Component {
 
   state = {
-    books:[]
+    books: []
   }
 
   componentDidMount() {
-    BooksAPI.getAll().then(bookList => {
-      this.setState({books:bookList})
-    })
+    BooksAPI.getAll().then(data => this.setState({ books: data }))
   }
 
   render() {
@@ -24,10 +20,10 @@ class BooksApp extends React.Component {
       <div className="app">
 
         <ListBooks
-        books={this.state.books}/>
+          books={this.state.books}
+        />
 
-        <Footer />
-
+        <Footer/>
       </div>
     )
   }
