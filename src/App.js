@@ -1,8 +1,9 @@
-import React from 'react'
-import * as BooksAPI from './BooksAPI'
-import './App.css'
-import Footer from './components/Footer'
-import ListBooks from './components/ListBooks'
+import React from 'react';
+import * as BooksAPI from './BooksAPI';
+import './App.css';
+import Footer from './components/Footer';
+import ListBooks from './components/ListBooks';
+import SearchBooks from './components/SearchBooks';
 
 
 class BooksApp extends React.Component {
@@ -23,6 +24,10 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
+
+
+        <SearchBooks changeBookShelf={this.changeBookShelf}/>
+
 
         <ListBooks books={this.state.books} changeBookShelf={this.changeBookShelf}/>
 

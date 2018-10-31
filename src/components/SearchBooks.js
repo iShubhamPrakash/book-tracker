@@ -46,7 +46,7 @@ class SearchBooks extends Component {
                   <li key={book.id}>
                     <Book book={book}
                       changeBookShelf={this.props.changeBookShelf}
-                      thisShelf={book.self}
+                      thisShelf={book.shelf}
                     />
                   </li>
                 ))
@@ -62,7 +62,11 @@ class SearchBooks extends Component {
 
 
 SearchBooks.propTypes = {
-  // changeState:PropTypes.func.isRequired
+  changeBookShelf:PropTypes.func
 }
 
 export default SearchBooks;
+
+// TODO: Add router
+// TODO: Fix- Add to currently reading nit working
+// TODO: take help from this video https://youtu.be/i6L2jLHV9j8?list=PLA0tkihp2GGm5SXXAN-jbBjKNISQkWspp&t=8346
