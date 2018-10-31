@@ -18,7 +18,7 @@ class SearchBooks extends Component {
 
   fetchBookOnQuery = (query) => {
     if (query) {
-      BooksAPI.search(query).then((data)=>this.setState({searchedbook:data}))
+      BooksAPI.search(query).then((data)=>this.setState({searchedbook:(data.error ? [] : data)}))
     } else {
       this.setState({searchedbook:[]})
     }
