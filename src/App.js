@@ -19,9 +19,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
 
-        <ListBooks
-          books={this.state.books}
-        />
+        <ListBooks books={this.state.books}/>
 
         <Footer/>
       </div>
@@ -30,4 +28,4 @@ class BooksApp extends React.Component {
 }
 
 
-export default BooksApp
+export default BooksApp;
