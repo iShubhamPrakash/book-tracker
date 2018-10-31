@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 class Book extends Component {
     render() {
+
+        let thumbnailURL = (this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : "");
+
         return (
             <div className="book">
                 <div className="book-top">
