@@ -21,7 +21,7 @@ class ListBooks extends Component {
                                 .filter(book => book.shelf === 'currentlyReading')
                                 .map(filteredBook => (
                                     <li key={filteredBook.id}>
-                                        <Book book={filteredBook}/>
+                                        <Book book={filteredBook} changeBookShelf={this.props.changeBookShelf} thisShelf={filteredBook.shelf}/>
                                     </li>
                                 ))
                             }
@@ -38,7 +38,7 @@ class ListBooks extends Component {
                                 .filter(book => book.shelf === 'wantToRead')
                                 .map(filteredBook => (
                                     <li key={filteredBook.id}>
-                                        <Book book={filteredBook}/>
+                                        <Book book={filteredBook} changeBookShelf={this.props.changeBookShelf} thisShelf={filteredBook.shelf}/>
                                     </li>
                                 ))
                            }
@@ -54,7 +54,7 @@ class ListBooks extends Component {
                             .filter(book => book.shelf === 'read')
                             .map(filteredBook => (
                                 <li key={filteredBook.id}>
-                                    <Book book={filteredBook}/>
+                                    <Book book={filteredBook} changeBookShelf={this.props.changeBookShelf} thisShelf={filteredBook.shelf}/>
                                 </li>
                             ))
                         }
@@ -75,7 +75,8 @@ class ListBooks extends Component {
 
 //TypeChecking of props used in this component
 ListBooks.propTypes = {
-    books: PropTypes.array
+    books: PropTypes.array,
+    changeBookShelf:PropTypes.func
 }
 
 

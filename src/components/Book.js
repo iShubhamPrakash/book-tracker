@@ -8,7 +8,9 @@ class Book extends Component {
                 <div className="book-top">
                     <div className="book-cover" style={{ width: 128, height: 193, backgroundImage:`url(${this.props.book.imageLinks.thumbnail})` }}></div>
                         <div className="book-shelf-changer">
-                            <select>
+                        <select value={this.props.thisShelf} onChange={(event) => {
+                            this.props.changeBookShelf(this.props.book, event.target.value)
+                            }}>
                             <option value="move" disabled>Move to...</option>
                             <option value="currentlyReading">Currently Reading</option>
                             <option value="wantToRead">Want to Read</option>
@@ -28,7 +30,9 @@ class Book extends Component {
 //TypeChecking of props used in this component
 
 Book.propTypes = {
-    book:PropTypes.object
+    book: PropTypes.object,
+    changeBookShelf: PropTypes.func,
+    thisShelf:PropTypes.string
 }
 
 
