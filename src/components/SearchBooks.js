@@ -50,6 +50,7 @@ class SearchBooks extends Component {
                     if (bookOnMainPage.id === book.id) {
                       bookShelf = bookOnMainPage.shelf;
                     }
+                    return bookShelf;
                   })
 
                   return (
