@@ -7,6 +7,9 @@ body {
 body, .app {
   background: white;
 }
+.search-books{
+  min-height: 77vh;
+}
 
 /* main page */
 
