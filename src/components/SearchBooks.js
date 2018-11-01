@@ -78,6 +78,3 @@ SearchBooks.propTypes = {
 }
 
 export default SearchBooks;
-
-// TODO: Add router
-// TODO: Fix- Add to currently reading nit working
