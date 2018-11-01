@@ -19,13 +19,14 @@ class SearchBooks extends Component {
 
   fetchBookOnQuery = (query) => {
     if (query) {
-      BooksAPI.search(query).then((data)=>this.setState({searchedbook:(data.error ? [] : data)}))
+      BooksAPI.search(query).then((data) => this.setState({ searchedbook: (data.error ? [] : data) }))
     } else {
       this.setState({searchedbook:[]})
     }
   }
 
   render() {
+
       return (
           <div className="search-books">
           <div className="search-books-bar">
@@ -43,14 +44,23 @@ class SearchBooks extends Component {
           <div className="search-books-results">
             <ol className="books-grid">
               {
-                this.state.searchedbook.map(book => (
-                  <li key={book.id}>
-                    <Book book={book}
-                      changeBookShelf={this.props.changeBookShelf}
-                      thisShelf={book.shelf}
-                    />
-                  </li>
-                ))
+                this.state.searchedbook.map(book => {
+                  let bookShelf = 'none';
+                  this.props.books.map(bookOnMainPage => {
+                    if (bookOnMainPage.id === book.id) {
+                      bookShelf = bookOnMainPage.shelf;
+                    }
+                  })
+
+                  return (
+                    <li key={book.id}>
+                      <Book book={book}
+                        changeBookShelf={this.props.changeBookShelf}
+                        thisShelf={bookShelf}
+                      />
+                    </li>
+                  )
+                })
               }
             </ol>
           </div>
@@ -63,6 +73,7 @@ class SearchBooks extends Component {
 
 
 SearchBooks.propTypes = {
+  books: PropTypes.array,
   changeBookShelf:PropTypes.func
 }
 
