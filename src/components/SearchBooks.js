@@ -3,6 +3,7 @@ import Book from './Book';
 import * as BooksAPI from '../BooksAPI';
 // Import proptypes for typeChecking
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class SearchBooks extends Component {
 
@@ -28,7 +29,7 @@ class SearchBooks extends Component {
       return (
           <div className="search-books">
           <div className="search-books-bar">
-            <a className="close-search">Close</a>
+            <Link to="/" className="close-search">Close</Link>
             <div className="search-books-input-wrapper">
               <input
               type="text"
@@ -69,4 +70,3 @@ export default SearchBooks;
 
 // TODO: Add router
 // TODO: Fix- Add to currently reading nit working
-// TODO: take help from this video https://youtu.be/i6L2jLHV9j8?list=PLA0tkihp2GGm5SXXAN-jbBjKNISQkWspp&t=8346
