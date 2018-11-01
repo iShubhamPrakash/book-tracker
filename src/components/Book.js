@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Book extends Component {
     render() {
-
+        // Get the correct thumbnail URL, if not present set to an empty string
         let thumbnailURL = (this.props.book.imageLinks) ? (this.props.book.imageLinks.thumbnail) : (" ");
 
         return (
@@ -31,7 +31,6 @@ class Book extends Component {
 
 
 //TypeChecking of props used in this component
-
 Book.propTypes = {
     book: PropTypes.object,
     changeBookShelf: PropTypes.func,
