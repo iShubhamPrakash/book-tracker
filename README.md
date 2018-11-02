@@ -9,7 +9,11 @@ You can also change the shelf of the book both from the main page or the earch p
 
 ## App Screenshots
 
+### Main Page
+
 ![](image1.png)
+
+### Search Page
 
 ![](image2.png)
 
