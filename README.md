@@ -1,10 +1,22 @@
-# MyReads: Book Tracking App
+# MyReads: A Book Tracking App
 
 This is an Application made using React which lets you organise you Books into categories like "Want to read", "Currently reading", and "Read".
 
 You can search for new books in the search page and add book directly to the respective shelf right from the search page.
 
 You can also change the shelf of the book both from the main page or the earch page.
+
+
+## App Screenshots
+
+![](image1.png)
+
+![](image2.png)
+
+![](image3.png)
+
+![](image4.png)
+
 
 ## Getting started with the App
 
