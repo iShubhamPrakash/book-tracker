@@ -112,7 +112,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Author
 
-Shubham Praksh
+Shubham Prakash
 
 (shubham.prakash2308@gmail.com)
 
