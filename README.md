@@ -13,10 +13,6 @@ You can also change the shelf of the book both from the main page or the earch p
 
 ![](image2.png)
 
-![](image3.png)
-
-![](image4.png)
-
 
 ## Getting started with the App
 
